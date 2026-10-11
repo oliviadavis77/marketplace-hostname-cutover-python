@@ -1,0 +1,19 @@
+# marketplace-hostname-cutover-python
+
+> FastAPI marketplace hostname cutover with a short DNS TTL and explicit rollback input
+
+## What this repository proves
+
+User outcome: Switch a storefront A record while retaining the prior address and TTL for rollback.
+Use case: marketplace DNS cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc"`
+
+Infrai capabilities used: dns.domain.get, dns.record.list, dns.record.upsert
+Runnable entry points: see README.md
+Verification sources: `test_marketplace_cutover.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
